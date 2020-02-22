@@ -1,0 +1,12 @@
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.deps.json
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.pdb
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csprojAssemblyReference.cache
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CoreCompileInputs.cache
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfoInputs.cache
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfo.cs
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CopyComplete
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\gitRepository\DevIO.Demo.Core\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.pdb
