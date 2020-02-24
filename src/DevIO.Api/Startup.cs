@@ -27,48 +27,65 @@ namespace DevIO.Api
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        public Startup(IHostingEnvironment hostEnvironment)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(hostEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{hostEnvironment.EnvironmentName}.json", true, true)
+                .AddEnvironmentVariables();
+
+            if (hostEnvironment.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+
+            Configuration = builder.Build();
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MeuDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            //services.AddIdentityConfiguration(Configuration);
+
             services.AddAutoMapper(typeof(Startup));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.Configure<ApiBehaviorOptions>(options => {
-                options.SuppressModelStateInvalidFilter = true;
-            });
+            services.WebApiConfig();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: "Development",
-                    configurePolicy: builder => builder.AllowAnyOrigin().
-                    AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
-            });
+            //services.AddSwaggerConfig();
+
+            //services.AddLoggingConfiguration(Configuration);
 
             services.ResolveDependencies();
-
-
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApiVersionDescriptionProvider provider)
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
+                app.UseCors("Development");
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseCors("Development"); // Usar apenas nas demos => Configuração Ideal: Production
                 app.UseHsts();
             }
-            app.UseCors("Development");
-            app.UseHttpsRedirection();
-            app.UseMvc();
+
+            app.UseAuthentication();
+
+            // app.UseMiddleware<ExceptionMiddleware>();
+
+            app.UseMvcConfiguration();
+
+            // app.UseSwaggerConfig(provider);
+
+            //app.UseLoggingConfiguration();
         }
     }
 }
