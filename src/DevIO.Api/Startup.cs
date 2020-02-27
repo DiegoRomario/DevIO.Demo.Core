@@ -14,6 +14,8 @@ using AutoMapper;
 using DevIO.Api.Configuration;
 using DevIO.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using DevIO.Api.Extensions;
 
 namespace DevIO.Api
 {
@@ -56,15 +58,14 @@ namespace DevIO.Api
 
             services.WebApiConfig();
 
-            //services.AddSwaggerConfig();
+            services.AddSwaggerConfig();
 
-            //services.AddLoggingConfiguration(Configuration);
+            services.AddLoggingConfiguration(Configuration);
 
             services.ResolveDependencies();
         }
 
-        // public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApiVersionDescriptionProvider provider)
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
@@ -79,13 +80,13 @@ namespace DevIO.Api
 
             app.UseAuthentication();
 
-            // app.UseMiddleware<ExceptionMiddleware>();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseMvcConfiguration();
 
-            // app.UseSwaggerConfig(provider);
+            app.UseSwaggerConfig(provider);
 
-            //app.UseLoggingConfiguration();
+            app.UseLoggingConfiguration();
         }
     }
 }

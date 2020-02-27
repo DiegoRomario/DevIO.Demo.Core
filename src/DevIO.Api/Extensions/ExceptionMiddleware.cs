@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-//using Elmah.Io.AspNetCore;
+using Elmah.Io.AspNetCore;
 using Microsoft.AspNetCore.Http;
 
 namespace DevIO.Api.Extensions
@@ -29,7 +29,7 @@ namespace DevIO.Api.Extensions
 
         private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            //await exception.ShipAsync(context);
+            await exception.ShipAsync(context);
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         }
     }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "fee6a9a40b0d1a3d73c0fc8edf0d5b2fe42a83d5"
+    "signature": "4f952a588c5bd58f8e2f4354d0749602545cd86e"
   },
   "compilationOptions": {
     "defines": [
@@ -27,10 +27,15 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "DevIO.Business": "1.0.0",
           "DevIO.Data": "1.0.0",
+          "Elmah.Io.AspNetCore": "3.8.100",
+          "Elmah.Io.AspNetCore.HealthChecks": "3.8.100",
           "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Versioning": "3.1.2",
+          "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "3.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
+          "Swashbuckle.AspNetCore": "4.0.1"
         },
         "runtime": {
           "DevIO.Api.dll": {}
@@ -69,6 +74,51 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Elmah.Io.AspNetCore/3.8.100": {
+        "dependencies": {
+          "Elmah.Io.Client": "3.7.79",
+          "Microsoft.AspNetCore.Http": "2.2.0",
+          "Microsoft.Extensions.Hosting": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {
+            "assemblyVersion": "3.8.100.0",
+            "fileVersion": "3.8.100.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.dll": {}
+        }
+      },
+      "Elmah.Io.AspNetCore.HealthChecks/3.8.100": {
+        "dependencies": {
+          "Elmah.Io.Client": "3.7.79",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.HealthChecks.dll": {
+            "assemblyVersion": "3.8.100.0",
+            "fileVersion": "3.8.100.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Elmah.Io.AspNetCore.HealthChecks.dll": {}
+        }
+      },
+      "Elmah.Io.Client/3.7.79": {
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.21"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elmah.Io.Client.dll": {
+            "assemblyVersion": "3.7.79.0",
+            "fileVersion": "3.7.79.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Elmah.Io.Client.dll": {}
+        }
+      },
       "FluentValidation/8.3.0": {
         "dependencies": {
           "System.ComponentModel.Annotations": "4.5.0"
@@ -81,6 +131,35 @@
         },
         "compile": {
           "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Versioning/3.1.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.6968.34335"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/3.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Versioning": "3.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.6968.34357"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -180,6 +259,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime/2.3.21": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.3.21.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
@@ -338,6 +431,71 @@
         },
         "compile": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/4.0.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "2.2.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.Collections.Immutable/1.5.0": {},
@@ -3655,12 +3813,47 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
     },
+    "Elmah.Io.AspNetCore/3.8.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W0lE8hf4+oha6eFwtYmZlGHmoYTrxzNStBe8SiwDHJorQxiNcwUXVyKoTh3gIPeM6Rsg8p4358IjPzEe2l++jQ==",
+      "path": "elmah.io.aspnetcore/3.8.100",
+      "hashPath": "elmah.io.aspnetcore.3.8.100.nupkg.sha512"
+    },
+    "Elmah.Io.AspNetCore.HealthChecks/3.8.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hQCqRyck+4vV9tIiHPpXLzeRPPoE0OAdOnz5AZNmIlp5J+V7Q3wBE52lK2sCV8cOUbr77yWnj+prJtHArdtx3g==",
+      "path": "elmah.io.aspnetcore.healthchecks/3.8.100",
+      "hashPath": "elmah.io.aspnetcore.healthchecks.3.8.100.nupkg.sha512"
+    },
+    "Elmah.Io.Client/3.7.79": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tiWKBPOjfs7EOTS0jMDge8gPT/GlWvR+nTz8o+ZYnb3fBE14Ji0A4hPD/DJa/AleNfP2uZE+5vNdbpPtDYwISg==",
+      "path": "elmah.io.client/3.7.79",
+      "hashPath": "elmah.io.client.3.7.79.nupkg.sha512"
+    },
     "FluentValidation/8.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-tQULydqVfFi68qjEw4Y+P3wM1Xp7kppLpUqPVKI6u8NDwlPVTm6V96qnLWCTO4khn7WtQ1p3ysnrNTl98fdJpA==",
       "path": "fluentvalidation/8.3.0",
       "hashPath": "fluentvalidation.8.3.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/SzDQOmzhvfBKorhBR4QKmIbyfe7nzjm/tekmbH+631nuBS5JJTeEf+T6SDAZE1TJXP0h2YTRIPj1a1Vv6j/8g==",
+      "path": "microsoft.aspnetcore.mvc.versioning/3.1.2",
+      "hashPath": "microsoft.aspnetcore.mvc.versioning.3.1.2.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+Xaa1Qsny2idroDWfnjQh2ye1E+Fp/SjiS7DNUDFDKjf0iDbD0s15Phq+nzWXf5xJtY1T5QnZPvxiPBe4w0E1w==",
+      "path": "microsoft.aspnetcore.mvc.versioning.apiexplorer/3.2.0",
+      "hashPath": "microsoft.aspnetcore.mvc.versioning.apiexplorer.3.2.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
@@ -3710,6 +3903,13 @@
       "sha512": "sha512-e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.Rest.ClientRuntime/2.3.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KDYlgTyO693V6pi6SGk9eg+dDvKjuOgmkapbHdpnB1SmTPKpvWxVLIMyARJsCFLfB6axyURUJHOfvxBQ0yJKeg==",
+      "path": "microsoft.rest.clientruntime/2.3.21",
+      "hashPath": "microsoft.rest.clientruntime.2.3.21.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.4": {
       "type": "package",
@@ -3780,6 +3980,34 @@
       "sha512": "sha512-fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "path": "remotion.linq/2.2.0",
       "hashPath": "remotion.linq.2.2.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zq6lkFieuFPNDwXwQ+e8i5zy2VMrexcRFU8mQORxqIc8r7Y+qKX63vg57yL1HeGCINHQGGzxGfw2rP63IeEqhg==",
+      "path": "swashbuckle.aspnetcore/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rqzS3vHrjz+tR5j0nZOKZyaMTDfLGbVYkwMq205aYuGbsiGwbOlNU0Q8lq4Q0ptQPMKVkUf8XouCIdJ3qpK17w==",
+      "path": "swashbuckle.aspnetcore.swagger/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ztAj0T1U+2AqQNA8b+nr8yVkDW9XzNaAfez6d1jO13sdn2A/JW5Syn9TThsakrHxYNLt6y6aQCXbyBfQXpcQwA==",
+      "path": "swashbuckle.aspnetcore.swaggergen/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d2U7NyV0e4UhyCzAVK9QHm0iz2QoVPUa9XzJ/Gr0rn/jBZWFpVLvigKv0vxFzO2E793sY605+4h885gvCdKSxQ==",
+      "path": "swashbuckle.aspnetcore.swaggerui/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512"
     },
     "System.Collections.Immutable/1.5.0": {
       "type": "package",
